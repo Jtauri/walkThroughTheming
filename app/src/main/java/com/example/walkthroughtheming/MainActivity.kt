@@ -15,8 +15,6 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 //MyThemen sijasta tuossa on tuo WalkThroughThemingTheme
 import com.example.walkthroughtheming.ui.theme.WalkThroughThemingTheme
-import androidx.compose.material3.ButtonDefaults
-
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.ui.Alignment
@@ -40,25 +38,12 @@ class MainActivity : ComponentActivity() {
     }
 }
 
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-    Button(
-        onClick = {},
-        colors = ButtonDefaults.buttonColors(containerColor = MaterialTheme.colorScheme.primary)
-    ) {
-        Text("Button Text")
-    }
-}
 
 @Preview(showBackground = true)
 @Composable
 fun GreetingPreview() {
     WalkThroughThemingTheme {
-        Greeting("Android")
+        MyApp()
     }
 }
 
