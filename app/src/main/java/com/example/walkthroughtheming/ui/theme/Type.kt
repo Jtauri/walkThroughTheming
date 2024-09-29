@@ -7,6 +7,16 @@ import androidx.compose.ui.text.font.FontWeight
 import androidx.compose.ui.unit.sp
 
 // Set of Material typography styles to start with
+val CustomTypography = Typography(
+    //H5 on muuttunut headLineSmalliksi
+    headlineSmall = TextStyle(
+        fontWeight = FontWeight.Bold,
+        fontSize = 24.sp,
+        letterSpacing = 1.5.sp,
+        fontFamily = FontFamily.SansSerif
+    )
+)
+
 val Typography = Typography(
     bodyLarge = TextStyle(
         fontFamily = FontFamily.Default,
