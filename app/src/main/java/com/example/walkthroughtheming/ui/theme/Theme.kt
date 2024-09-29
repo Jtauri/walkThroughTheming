@@ -55,7 +55,8 @@ fun WalkThroughThemingTheme(
 
     MaterialTheme(
         colorScheme = colorScheme,
-        typography = Typography,
+        //eikös se tässä pidä olla tuo CustomTypographymääritys joka tehtiin Type.kt:ssä?
+        typography = CustomTypography,
         //onkohan tämä enää tarpeellinen tässä? Testataanpa kommentoimalla pois
         //shapes = Shapes(),
         content = content
