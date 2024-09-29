@@ -31,8 +31,9 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             WalkThroughThemingTheme {
+                //My Title oli tilapalkin päällä niin innerPaddingillä sen sen sai sit alemmas
                 Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    MyApp()
+                    MyApp(modifier = Modifier.padding(innerPadding))
                 }
             }
         }
@@ -62,7 +63,7 @@ fun GreetingPreview() {
 }
 
 @Composable
-fun MyApp() {
+fun MyApp(modifier: Modifier = Modifier) {
     // Define a Modifier to be reused across multiple components
     val appModifier = Modifier
         .fillMaxWidth()
@@ -70,7 +71,7 @@ fun MyApp() {
 
     // The Column holds the composables vertically
     Column(
-        modifier = Modifier.fillMaxSize(),
+        modifier = modifier,
         verticalArrangement = Arrangement.Top,
         horizontalAlignment = Alignment.CenterHorizontally
     ) {
